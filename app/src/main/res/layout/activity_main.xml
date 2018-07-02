@@ -6,5 +6,69 @@
     android:layout_height="match_parent"
     tools:context="com.example.samsung.appcidadao.MainActivity">
 
+    <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical"
+     tools:layout_editor_absoluteX="347dp"
+     tools:layout_editor_absoluteY="-101dp">
+
+    <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Escolha que tipo de CIDADÃO você é:" />
+
+    <RadioGroup
+    android:id="@+id/rgCidadao"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RadioButton
+    android:id="@+id/rbEleitor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checked="true"
+    android:text="Eleitor" />
+
+    <RadioButton
+    android:id="@+id/rbCandidato"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Candidato" />
+
+    </RadioGroup>
+
+    <TableRow
+    android:id="@+id/tableRow2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="invisible">
+    </TableRow>
+
+    <TableRow
+    android:id="@+id/tableRow1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+    android:id="@+id/btAdd"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="OK" />
+
+    </TableRow>
+    <TableRow
+    android:id="@+id/tableRow3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+    android:id="@+id/imgCidadao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srcCompat="@drawable/cidadao" />
+
+    </TableRow>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
