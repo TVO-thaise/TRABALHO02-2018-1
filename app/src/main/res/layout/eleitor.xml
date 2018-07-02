@@ -94,7 +94,7 @@
 
 
     <Button
-        android:id="@+id/bt_salvar_evento"
+        android:id="@+id/bt_salvar_eleitor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -104,22 +104,22 @@
         app:layout_constraintTop_toBottomOf="@+id/etMunicipio" />
 
     <Button
-        android:id="@+id/bt_alterar_evento"
+        android:id="@+id/bt_alterar_eleitor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="Alterar"
-        app:layout_constraintStart_toEndOf="@+id/bt_salvar_evento"
+        app:layout_constraintStart_toEndOf="@+id/bt_salvar_eleitor"
         app:layout_constraintTop_toBottomOf="@+id/etMunicipio" />
 
     <Button
-        android:id="@+id/bt_deletar_evento"
+        android:id="@+id/bt_deletar_eleitor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="Deletar"
-        app:layout_constraintStart_toEndOf="@+id/bt_alterar_evento"
+        app:layout_constraintStart_toEndOf="@+id/bt_alterar_eleitor"
         app:layout_constraintTop_toBottomOf="@+id/etMunicipio" />
 </android.support.constraint.ConstraintLayout>
