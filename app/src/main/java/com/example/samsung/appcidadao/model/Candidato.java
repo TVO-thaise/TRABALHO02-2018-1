@@ -1,5 +1,6 @@
 package com.example.samsung.appcidadao.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**

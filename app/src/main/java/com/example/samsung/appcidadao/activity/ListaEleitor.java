@@ -20,7 +20,7 @@ public class ListaEleitor extends AppCompatActivity implements ClickRecyclerView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_cidadao);
+        setContentView(R.layout.activity_lista_eleitor);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

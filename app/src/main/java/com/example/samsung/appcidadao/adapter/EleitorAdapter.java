@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.samsung.appcidadao.R;
+import com.example.samsung.appcidadao.model.Eleitor;
+
+import java.util.List;
 
 /**
  * Created by Samsung on 02/07/2018.
@@ -21,7 +24,7 @@ public class EleitorAdapter extends RecyclerView.Adapter {
         private static ClickRecyclerViewListener clickRecyclerViewListener;
 
     public
-        EleitorAdapter(List <Eleitor> eleitor, Context context, ClickRecyclerViewListener clickRecyclerViewListener)
+        EleitorAdapter(List<Eleitor> eleitor, Context context, ClickRecyclerViewListener clickRecyclerViewListener)
         {
             this.eleitor = eleitor;
             this.context = context;

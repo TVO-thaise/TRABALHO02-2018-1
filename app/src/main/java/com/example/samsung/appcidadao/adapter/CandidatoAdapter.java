@@ -1,10 +1,17 @@
 package com.example.samsung.appcidadao.adapter;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.samsung.appcidadao.R;
+import com.example.samsung.appcidadao.model.Candidato;
+
+import java.util.List;
 
 /**
  * Created by Samsung on 02/07/2018.
@@ -25,7 +32,7 @@ public class CandidatoAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder (ViewGroup parent,int viewType){
+    public RecyclerView.ViewHolder onCreateViewHolder (ViewGroup parent, int viewType){
 
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.item_candidato_cv, parent, false);
@@ -44,12 +51,12 @@ public class CandidatoAdapter extends RecyclerView.Adapter {
 
 
         candidatoHolder.nomeCandidato.setText(candidato.getNome());
-        candidatoHolder.partidoCandidato.setText(candidato.getPartidoCandidato());
-        candidatoHolder.numeroUrnaCandidato.setText(candidato.getNumeroUrnaCandidato());
-        candidatoHolder.cargoCandidato.setText(candidato.getCargooCandidato());
-        candidatoHolder.numeroVotosCandidato.setText(candidato.getNumeroVotosCandidato());
-        candidatoHolder.estadoCandidato.setText(candidato.getEstadooCandidato());
-        candidatoHolder.municipioCandidato.setText(candidato.getMunicipioCandidato());
+        candidatoHolder.partidoCandidato.setText(candidato.getPartido());
+        candidatoHolder.numeroUrnaCandidato.setText(candidato.getNumeroUrna());
+        candidatoHolder.cargoCandidato.setText(candidato.getCargo());
+        candidatoHolder.numeroVotosCandidato.setText(candidato.getNumeroVotos());
+        candidatoHolder.estadoCandidato.setText(candidato.getEstado());
+        candidatoHolder.municipioCandidato.setText(candidato.getMunicipio());
 
 
     }
