@@ -1,4 +1,4 @@
-package com.example.samsung.appcidadao;
+package com.example.samsung.appcidadao.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.samsung.appcidadao.R;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 

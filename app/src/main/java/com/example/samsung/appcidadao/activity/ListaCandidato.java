@@ -1,9 +1,11 @@
-package com.example.samsung.appcidadao;
+package com.example.samsung.appcidadao.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.example.samsung.appcidadao.R;
 
 import java.util.List;
 
@@ -11,14 +13,14 @@ import java.util.List;
  * Created by Samsung on 02/07/2018.
  */
 
-public class ListaCidadao extends AppCompatActivity implements ClickRecyclerViewListener{
+public class ListaCandidato extends AppCompatActivity implements ClickRecyclerViewListener{
 
     private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_cidadao);
+        setContentView(R.layout.activity_lista_candidato);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,7 +29,7 @@ public class ListaCidadao extends AppCompatActivity implements ClickRecyclerView
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListaCidadao.this,CidadaoDetalhe.class);
+                Intent intent = new Intent(ListaCandidato.this,CandidatoDetalhe.class);
                 intent.putExtra("id",0);
                 startActivity(intent);
             }
@@ -41,23 +43,23 @@ public class ListaCidadao extends AppCompatActivity implements ClickRecyclerView
         super.onResume();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvCidadao);
 
-        recyclerView.setAdapter(new CidadaoAdapter(getEventos(),this,this));
+        recyclerView.setAdapter(new CandidatoAdapter(getCandidato(),this,this));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 
-    public List<Cidadao> getCidadao(){
+    public List<Candidato> getCandidato(){
 
-        return (List) realm.where(Evento.class).findAll(); // na verdade aqui deveria ter uma lista pra eleitor e outra pra candidato
+        return (List) realm.where(Evento.class).findAll(); // na verdade aqui deveria ter uma lista pra candidato e outra pra candidato
 
     }
 
     @Override
     public void onClick(Object object) {
-        Cidadao cidadao = (Cidadao) object;
-        Intent intent = new Intent(ListaCidadao.this,CidadaoDetalhe.class);
-        intent.putExtra("id",cidadao.getId());
+        Candidato candidato = (Candidato) object;
+        Intent intent = new Intent(ListaCandidato.this,CandidatoDetalhe.class);
+        intent.putExtra("id",candidato.getId());
         startActivity(intent);
     }
 
